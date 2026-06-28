@@ -63,3 +63,18 @@ input{
 #score,#risk,#time,#suggest{
   margin-top:8px;
 }
+.home {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  background-color: #0a1f44;
+  color: white;
+  padding: 8px 15px;
+  text-decoration: none;
+  border-radius: 6px;
+  font-weight: bold;
+}
+
+.home:hover {
+  background-color: #1f4aa8;
+}
