@@ -76,3 +76,66 @@ function copy(){
   navigator.clipboard.writeText(pass.value);
   alert("Password Copied!");
 }
+/* =========================
+   HACKER INTRO ANIMATION
+========================= */
+
+let welcomeText = "WELCOME TO PASSWORD STRENGTH CHECKER 1";
+let i = 0;
+
+function type() {
+  if (i < welcomeText.length) {
+    document.getElementById("text").innerHTML += welcomeText.charAt(i);
+    i++;
+    setTimeout(type, 80);
+  }
+}
+
+window.onload = function () {
+  type();
+
+  // Splash Screen Hide
+  setTimeout(function () {
+    document.getElementById("splash").style.display = "none";
+  }, 4000);
+
+  // Matrix Effect
+  const canvas = document.getElementById("matrix");
+  const ctx = canvas.getContext("2d");
+
+  canvas.width = window.innerWidth;
+  canvas.height = window.innerHeight;
+
+  const letters = "01ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789";
+  const chars = letters.split("");
+
+  const fontSize = 14;
+  const columns = canvas.width / fontSize;
+
+  const drops = [];
+
+  for (let x = 0; x < columns; x++) {
+    drops[x] = 1;
+  }
+
+  function draw() {
+    ctx.fillStyle = "rgba(0,0,0,0.05)";
+    ctx.fillRect(0, 0, canvas.width, canvas.height);
+
+    ctx.fillStyle = "#00ff00";
+    ctx.font = fontSize + "px monospace";
+
+    for (let j = 0; j < drops.length; j++) {
+      const character = chars[Math.floor(Math.random() * chars.length)];
+      ctx.fillText(character, j * fontSize, drops[j] * fontSize);
+
+      if (drops[j] * fontSize > canvas.height && Math.random() > 0.975) {
+        drops[j] = 0;
+      }
+
+      drops[j]++;
+    }
+  }
+
+  setInterval(draw, 35);
+};
