@@ -10,6 +10,7 @@ body{
   justify-content:center;
   align-items:center;
   background:linear-gradient(135deg,#0f172a,#020617);
+  position: relative;   /* ✅ FIX ADDED */
 }
 
 .container{
@@ -63,6 +64,8 @@ input{
 #score,#risk,#time,#suggest{
   margin-top:8px;
 }
+
+/* ✅ HOME BUTTON (same, no change needed) */
 .home {
   position: absolute;
   top: 15px;
