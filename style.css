@@ -138,3 +138,156 @@ input{
 @keyframes load{
   to{width:100%;}
 }
+/* ========================= */
+/* CYBER BACKGROUND */
+/* ========================= */
+
+.cyber-bg{
+    position:fixed;
+    top:0;
+    left:0;
+    width:100%;
+    height:100%;
+    overflow:hidden;
+    z-index:-1;
+    background:
+    radial-gradient(circle at center,#0b1b3d 0%,#050814 45%,#000 100%);
+}
+
+/* GRID */
+
+.grid{
+    position:absolute;
+    width:100%;
+    height:100%;
+    background-image:
+    linear-gradient(rgba(0,255,255,.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(0,255,255,.05) 1px, transparent 1px);
+
+    background-size:50px 50px;
+}
+
+/* GLOW */
+
+.glow{
+    position:absolute;
+    border-radius:50%;
+    filter:blur(120px);
+}
+
+.glow1{
+    width:350px;
+    height:350px;
+    background:#00e5ff55;
+    left:-100px;
+    top:100px;
+}
+
+.glow2{
+    width:350px;
+    height:350px;
+    background:#008cff55;
+    right:-100px;
+    bottom:50px;
+}
+
+/* CIRCLES */
+
+.circle{
+    position:absolute;
+    border:1px solid rgba(0,255,255,.3);
+    border-radius:50%;
+}
+
+.c1{
+    width:250px;
+    height:250px;
+    top:8%;
+    left:5%;
+}
+
+.c2{
+    width:180px;
+    height:180px;
+    bottom:10%;
+    right:12%;
+}
+
+.c3{
+    width:120px;
+    height:120px;
+    top:35%;
+    right:28%;
+}
+
+/* HEXAGONS */
+
+.hexagon{
+    position:absolute;
+    width:80px;
+    height:46px;
+    border:2px solid rgba(0,255,255,.25);
+}
+
+.hexagon::before,
+.hexagon::after{
+    content:"";
+    position:absolute;
+    width:56px;
+    height:56px;
+    border-left:2px solid rgba(0,255,255,.25);
+    border-top:2px solid rgba(0,255,255,.25);
+    transform:rotate(45deg);
+    left:10px;
+}
+
+.hexagon::before{
+    top:-28px;
+}
+
+.hexagon::after{
+    bottom:-28px;
+}
+
+.h1{
+    top:18%;
+    right:12%;
+}
+
+.h2{
+    bottom:18%;
+    left:12%;
+}
+
+.h3{
+    top:55%;
+    left:20%;
+}
+
+/* LINES */
+
+.line{
+    position:absolute;
+    height:2px;
+    background:rgba(0,255,255,.25);
+}
+
+.l1{
+    width:220px;
+    top:30%;
+    left:15%;
+    transform:rotate(18deg);
+}
+
+.l2{
+    width:180px;
+    top:60%;
+    right:18%;
+    transform:rotate(-25deg);
+}
+
+.l3{
+    width:260px;
+    bottom:22%;
+    left:35%;
+}
